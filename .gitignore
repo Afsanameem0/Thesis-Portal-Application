@@ -1,0 +1,17 @@
+﻿# Ignore Node.js dependencies
+node_modules/
+server/node_modules/
+
+# Ignore uploads (user-generated files, PDFs, images)
+server/uploads/
+
+# Ignore environment files (if you have .env with secrets)
+.env
+
+# Ignore OS junk
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temp files
+*.log
+tmp/
