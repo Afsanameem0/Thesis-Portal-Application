@@ -1,0 +1,138 @@
+.session-warning-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.session-warning-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.session-warning-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.session-warning-header h3 {
+  margin: 0;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.session-warning-content {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.session-warning-content p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.session-timer {
+  margin: 16px 0;
+  padding: 12px;
+  background: #fff3e0;
+  border-radius: 8px;
+  border: 2px solid #ff9800;
+}
+
+.time-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  font-family: 'Courier New', monospace;
+}
+
+.session-warning-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.extend-session-btn,
+.logout-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.extend-session-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.extend-session-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.logout-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .session-warning-modal {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .session-warning-actions {
+    flex-direction: column;
+  }
+  
+  .extend-session-btn,
+  .logout-btn {
+    width: 100%;
+  }
+} 
